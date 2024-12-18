@@ -1,0 +1,32 @@
+package com.parttimereader.retrofit_example
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.parttimereader.retrofit_example.ui.MovieApp
+import com.parttimereader.retrofit_example.ui.theme.Retrofit_exampleTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
+        super.onCreate(savedInstanceState)
+        setContent {
+            Retrofit_exampleTheme  {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                ) {
+                    MovieApp()
+                }
+            }
+        }
+    }
+}
